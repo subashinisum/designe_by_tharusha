@@ -478,115 +478,6 @@ body {
         display: none;
     }
 }
-/* Services Section */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.service-card {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    cursor: none;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--neon-glow);
-}
-
-.card-icon {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-}
-
-/* Projects Section */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background: var(--card-bg);
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    cursor: none;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--neon-glow);
-}
-
-.project-image img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-info {
-    padding: 1.5rem;
-}
-
-/* Contact Form */
-.contact-container {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contact-form {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-    position: relative;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-color);
-    font-family: inherit;
-    font-size: 1rem;
-}
-
-.form-group textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-.form-border {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--primary-color);
-    transition: width 0.3s ease;
-}
-
-.form-group input:focus ~ .form-border,
-.form-group textarea:focus ~ .form-border {
-    width: 100%;
-    box-shadow: var(--neon-glow);
-}
 
 /* Buttons */
 .btn {
@@ -962,9 +853,9 @@ ul {
     top: auto;
     bottom: 20px;
     left: 0;
-      gap:20px;
     width: 100%;
     height: 0;
+    gap: 20px;
     background-color: #000;
     transition: all 0.3s ease-in-out;
   }
@@ -994,6 +885,7 @@ ul {
       #e1306c,
       #fd1f1f
     );
+   
   }
   
   .example-2 .icon-content a[data-social="youtube"] .filled,
@@ -1027,8 +919,8 @@ ul {
         height: 100%;
         left: 0;
         top: 0;
+        margin-bottom: 20px;
         opacity: 0;
-        margin-bottom:20px;
         transform: translateZ(-300px);
         transition: all 1.2s cubic-bezier(0.65, 0, 0.35, 1);
         background-size: cover;
