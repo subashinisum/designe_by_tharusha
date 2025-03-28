@@ -1,417 +1,882 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tharusha | Creative Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <div class="cursor">
-        <div class="cursor-dot"></div>
-        <div class="cursor-outline"></div>
-    </div>
-    <div class="cursor-trail"></div>
-    <div class="space-background">
-        <div class="stars"></div>
-        <div class="twinkling"></div>
-        <div class="nebula"></div>
-        <div class="shooting-stars"></div>
-    </div>
+// DOM Elements
+const navbar = document.querySelector('.navbar');
+const mobileMenu = document.querySelector('.mobile-menu');
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('.section');
+const skillsRain1 = document.querySelector('.skills-rain');
+const riverFlow2= document.querySelector('.river-flow');
+const shootingStarsContainer = document.querySelector('.shooting-stars');
+const starsBackground = document.querySelector('.stars-background');
+const cursor = document.querySelector('.cursor');
+const cursorDot = document.querySelector('.cursor-dot');
+const cursorOutline = document.querySelector('.cursor-outline');
+const cursorTrail = document.querySelector('.cursor-trail');
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-brand">
-            <div class="logo-container">
-                <span class="logo-text">T</span>
-            </div>
-            <h1>Tharusha</h1>
-        </div>
-
-        <div class="nav-menu">
-            <a href="#home" class="nav-link active">
-                <i class="fas fa-home"></i>
-                <span>Home</span>
-            </a>
-            <a href="#services" class="nav-link">
-                <i class="fas fa-laptop-code"></i>
-                <span>Services</span>
-            </a>
-            <a href="#projects" class="nav-link">
-                <i class="fas fa-code"></i>
-                <span>Projects</span>
-            </a>
-            <a href="#about" class="nav-link">
-                <i class="fas fa-user"></i>
-                <span>About</span>
-            </a>
-            <a href="#contact" class="nav-link">
-                <i class="fas fa-envelope"></i>
-                <span>Contact</span>
-            </a>
-        </div>
-
-        <button class="nav-toggle">
-            <i class="fas fa-bars"></i>
-        </button>
-    </nav>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu">
-        <a href="#home" class="nav-link active">
-            <i class="fas fa-home"></i>
-            <span>Home</span>
-        </a>
-        <a href="#services" class="nav-link">
-            <i class="fas fa-laptop-code"></i>
-            <span>Services</span>
-        </a>
-        <a href="#projects" class="nav-link">
-            <i class="fas fa-code"></i>
-            <span>Projects</span>
-        </a>
-        <a href="#about" class="nav-link">
-            <i class="fas fa-user"></i>
-            <span>About</span>
-        </a>
-        <a href="#contact" class="nav-link">
-            <i class="fas fa-envelope"></i>
-            <span>Contact</span>
-        </a>
-    </div>
-
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Home Section -->
-        <section id="home" class="section active">
-            <div class="profile-container">
-                <div class="profile-wrapper">
-                    <div class="profile-photo">
-                        <img src="c.jpg" alt="Tharusha">
-                    </div>
-                    <div class="neon-ring"></div>
-                    <div class="neon-glow"></div>
-                </div>
-                <div class="profile-info">
-                    <h1>Hey I'm Tharusha </h1>
-                    <h3 class="typewriter">Full Stack Developer</h3>
-                    <p>Crafting digital experiences with code and creativity</p>
-                    <br>
-                    <div class="cta-buttons">
-                        <a href="#about" class="btn btn-primary">View Work</a>
-                        <a href="#contact" class="btn btn-outline">Contact Me</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="section">
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="card-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>Creating responsive and modern web applications</p>
-                </div>
-                <div class="service-card">
-                    <div class="card-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Mobile Apps</h3>
-                    <p>Building cross-platform mobile solutions</p>
-                </div>
-                <div class="service-card">
-                    <div class="card-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Backend Development</h3>
-                    <p>Developing robust server-side applications</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-video"></i>
-                    </div>
-                    <h3>Video editing</h3>
-                    <p>Creative video</p>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="v.jpg" alt="Project 1">
-                    </div>
-                    <div class="project-info">
-                        <h3>Education Management System</h3>
-                       
-                        
-                    </div>
-                </article>
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="b.jpg" alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3>Modern E-Commerce Website UI</h3>
-                       
-                    
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="h.jpeg" alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3>Online learning Platform</h3>
-                        
-                    
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="j.jpeg" alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3>Professional Project Management System</h3>
-                 
-                    
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="n.jpg" alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3>Real Time Chat Aplication</h3>
-                      
-                    
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="l.jpeg" alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3>Professional E-comerce Website</h3>
-                     
-                    
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="contact-container">
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" required placeholder="Your Name">
-                        <div class="form-border"></div>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" required placeholder="Your Email">
-                        <div class="form-border"></div>
-                    </div>
-                    <div class="form-group">
-                        <textarea required placeholder="Your Message"></textarea>
-                        <div class="form-border"></div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </section>
-        <!--Abouth section-->
-        <section id="about" class="section">
-            <div class="about-container">
-                <!-- Decorative elements -->
-                <div class="about-decoration about-decoration-1"></div>
-                <div class="about-decoration about-decoration-2"></div>
-                
-                <div class="about-content-wrapper">
-                    <!-- Profile Image with 3D effect -->
-                    <div class="about-profile">
-                        <div class="profile-3d-container">
-                            <img src="c.jpg" alt="Tharusha" class="about-image">
-                            <div class="profile-neon-ring"></div>
-                            <div class="profile-neon-glow"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Content Area -->
-                    <div class="about-content">
-                        
-                        <div class="about-text-group">
-                            <p class="about-text">
-                                <i class="fas fa-code neon-icon"></i>
-                                <span class="highlight">Full Stack Developer</span> with 3+ years of experience building web and mobile applications.
-                            </p>
-                            
-                            <p class="about-text">
-                                <i class="fas fa-graduation-cap neon-icon"></i>
-                                Computer Science graduate passionate about creating <span class="highlight">interactive digital experiences</span>.
-                            </p>
-                            
-                            <p class="about-text">
-                                <i class="fas fa-lightbulb neon-icon"></i>
-                                Specializing in <span class="highlight">React, Node.js,laravel,Django and modern JavaScript</span> frameworks.
-                            </p>
-                        </div>
-                        
-     
-    </main>
-   <!--skils-->
-   <div class="skills-section"></div>
-
-   
-
-  
-  <!--hero-->
-  <section class="hero">
-    <div class="gradient-overlay"></div>
-    <div class="slider">
-        <!-- Slide 1 -->
-        <div class="slide active" style="background-image: url('images/t.jpg')">
-            <div class="slide-content">
-                <h2>Innovative Technology</h2>
-                <p>Discover cutting-edge solutions that push boundaries and transform industries with our advanced technological expertise.</p>
-            </div>
-        </div>
-        
-        <!-- Slide 2 -->
-        <div class="slide" style="background-image: url('images/D.jpg')">
-            <div class="slide-content">
-                <h2>Creative Development</h2>
-                <p>Custom software solutions tailored to your business needs, crafted with precision and innovative thinking.</p>
-            </div>
-        </div>
-        
-        <!-- Slide 3 -->
-        <div class="slide" style="background-image: url('images/s.jpg')">
-            <div class="slide-content">
-                <h2>Data Revolution</h2>
-                <p>Harness the power of data analytics to drive decision-making and gain competitive advantage in your market.</p>
-            </div>
-        </div>
-    </div>
+// Mobile Navigation Toggle
+navToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    const icon = navToggle.querySelector('i');
     
-    <!-- Navigation Dots -->
-    <div class="dots">
-        <div class="dot active" data-index="0"></div>
-        <div class="dot" data-index="1"></div>
-        <div class="dot" data-index="2"></div>
-    </div>
-</section>
+    if (mobileMenu.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+        document.body.style.overflow = 'hidden';
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+        document.body.style.overflow = '';
+    }
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+        if (!mobileMenu.contains(e.target) && !navToggle.contains(e.target) && mobileMenu.classList.contains('active')) {
+            mobileMenu.classList.remove('active');
+            const icon = navToggle.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+            document.body.style.overflow = '';
+        }
+    }
+});
+
+// Handle mobile menu link clicks
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        // Update active state
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        
+        if (window.innerWidth <= 768) {
+            mobileMenu.classList.remove('active');
+            const icon = navToggle.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+            document.body.style.overflow = '';
+        }
+        
+        // Add small delay before scrolling to section
+        setTimeout(() => {
+            const targetId = link.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 300);
+    });
+});
+
+// Add scroll event listener for navbar background
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+    } else {
+        navbar.style.background = 'rgba(0, 0, 0, 0.8)';
+    }
+});
+
+// Handle window resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+        const icon = navToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+        document.body.style.overflow = '';
+    }
+});
+
+// Section Navigation
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').slice(1);
+        
+        // Update active states
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        
+        sections.forEach(section => {
+            section.classList.remove('active');
+            if (section.id === targetId) {
+                section.classList.add('active');
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+
+        // Close mobile navigation
+        if (window.innerWidth <= 768) {
+            mobileMenu.classList.remove('active');
+            const icon = navToggle.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+});
+
+// Skills Animation
+document.addEventListener('DOMContentLoaded', function() {
+    // Skills data with sub-skills
+    const skillsData = [
+        {
+            name: 'Frontend',
+            icon: '💻',
+            subSkills: ['React', 'Vue', 'Angular', 'HTML5', 'CSS3', 'JavaScript'],
+            color: '#4facfe'
+        },
+        {
+            name: 'Backend',
+            icon: '🖥️',
+            subSkills: ['Node.js', 'Python', 'Java', 'PHP', 'Express', 'Django'],
+            color: '#00f2fe'
+        },
+        {
+            name: 'Database',
+            icon: '🗄️',
+            subSkills: ['MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', 'Redis', 'GraphQL'],
+            color: '#43e97b'
+        },
+        {
+            name: 'DevOps',
+            icon: '⚙️',
+            subSkills: ['Docker', 'AWS', 'CI/CD', 'Kubernetes', 'Terraform', 'Azure'],
+            color: '#fa709a'
+        }
+    ];
+
+    const container = document.querySelector('.skills-section'); // Changed container class
+    container.innerHTML = `
+        ${skillsData.map(skill => `
+            <div class="skill-card" style="--accent-color: ${skill.color}">
+                <div class="skill-main">
+                    <span class="skill-icon">${skill.icon}</span>
+                    <h3>${skill.name}</h3>
+                    <div class="skill-arrow">▼</div>
+                </div>
+                <div class="sub-skills">
+                    ${skill.subSkills.map(sub => `
+                        <span class="sub-skill">${sub}</span>
+                    `).join('')}
+                </div>
+            </div>
+        `).join('')}
+    `;
+
+    // Toggle sub-skills on click (mobile friendly)
+    const skillCards = container.querySelectorAll('.skill-card');
+    skillCards.forEach(card => {
+        const arrow = card.querySelector('.skill-arrow');
+        const subSkills = card.querySelector('.sub-skills');
+        
+        card.addEventListener('click', function() {
+            const isOpen = subSkills.style.display === 'flex';
+            subSkills.style.display = isOpen ? 'none' : 'flex';
+            arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+        });
+        
+        // Hover effects for desktop
+        card.addEventListener('mouseenter', function() {
+            if (window.innerWidth > 768) {
+                subSkills.style.display = 'flex';
+                arrow.style.transform = 'rotate(180deg)';
+            }
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            if (window.innerWidth > 768) {
+                subSkills.style.display = 'none';
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        });
+    });
+
+    // Add styles
+    const style = document.createElement('style');
+    style.textContent = `
+        .skills-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 20px;
+        }
+        
+        .skill-card {
+            background: rgba(40, 40, 50, 0.8);
+            border-radius: 12px;
+            min-width: 220px;
+            flex: 1;
+            border-left: 5px solid var(--accent-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        
+        .skill-main {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+        }
+        
+        .skill-icon {
+            font-size: 2.5rem;
+        }
+        
+        .skill-card h3 {
+            margin: 0;
+            color: white;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        
+        .skill-arrow {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .sub-skills {
+            display: none;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0 25px 25px;
+            justify-content: center;
+        }
+        
+        .sub-skill {
+            background: rgba(255,255,255,0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #e0e0e0;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .skills-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .skill-card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+});
+//hearo
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const arrowLeft = document.querySelector('.arrow-left');
+    const arrowRight = document.querySelector('.arrow-right');
+    let currentIndex = 0;
+    let autoSlideInterval;
+    let isAnimating = false;
+    const slideCount = slides.length;
+    const animationDuration = 1200; // Match CSS transition duration
+    
+    // Initialize slider
+    function initSlider() {
+        updateSliderPosition();
+        startAutoSlide();
+        
+        // Set up event listeners
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                if (isAnimating) return;
+                const index = parseInt(this.getAttribute('data-index'));
+                goToSlide(index);
+            });
+        });
+        
+        arrowLeft.addEventListener('click', () => {
+            if (isAnimating) return;
+            prevSlide();
+        });
+        
+        arrowRight.addEventListener('click', () => {
+            if (isAnimating) return;
+            nextSlide();
+        });
+        
+        // Pause autoslide on hover/touch
+        slider.addEventListener('mouseenter', pauseAutoSlide);
+        slider.addEventListener('mouseleave', startAutoSlide);
+        slider.addEventListener('touchstart', pauseAutoSlide);
+        slider.addEventListener('touchend', startAutoSlide);
+    }
+    
+    // Update slider position
+    function updateSliderPosition() {
+        slides.forEach((slide, index) => {
+            slide.classList.remove('active', 'prev', 'next');
+            
+            if (index === currentIndex) {
+                slide.classList.add('active');
+            } else if (index === (currentIndex + 1) % slideCount) {
+                slide.classList.add('next');
+            } else if (index === (currentIndex - 1 + slideCount) % slideCount) {
+                slide.classList.add('prev');
+            }
+        });
+        
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+    
+    // Go to specific slide
+    function goToSlide(index) {
+        if (index === currentIndex) return;
+        
+        isAnimating = true;
+        currentIndex = index;
+        updateSliderPosition();
+        
+        setTimeout(() => {
+            isAnimating = false;
+        }, animationDuration);
+        
+        resetAutoSlide();
+    }
+    
+    // Next slide
+    function nextSlide() {
+        isAnimating = true;
+        currentIndex = (currentIndex + 1) % slideCount;
+        updateSliderPosition();
+        
+        setTimeout(() => {
+            isAnimating = false;
+        }, animationDuration);
+        
+        resetAutoSlide();
+    }
+    
+    // Previous slide
+    function prevSlide() {
+        isAnimating = true;
+        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        updateSliderPosition();
+        
+        setTimeout(() => {
+            isAnimating = false;
+        }, animationDuration);
+        
+        resetAutoSlide();
+    }
+    
+    // Auto slide functionality
+    function startAutoSlide() {
+        if (!autoSlideInterval && slideCount > 1) {
+            autoSlideInterval = setInterval(nextSlide, 5000);
+        }
+    }
+    
+    function pauseAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = null;
+    }
+    
+    function resetAutoSlide() {
+        pauseAutoSlide();
+        startAutoSlide();
+    }
+    
+    // Touch/swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const swipeThreshold = 50;
+    
+    slider.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+    
+    slider.addEventListener('touchend', (e) => {
+        if (isAnimating) return;
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, {passive: true});
+    
+    function handleSwipe() {
+        const difference = touchEndX - touchStartX;
+        
+        if (difference < -swipeThreshold) {
+            nextSlide();
+        } else if (difference > swipeThreshold) {
+            prevSlide();
+        }
+    }
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (isAnimating) return;
+        
+        if (e.key === 'ArrowRight') {
+            nextSlide();
+        } else if (e.key === 'ArrowLeft') {
+            prevSlide();
+        }
+    });
+    
+    // Initialize everything
+    initSlider();
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        // Adjust slider height if needed
+        const hero = document.querySelector('.hero');
+        hero.style.height = window.innerHeight + 'px';
+    });
+});
+//mouse animation
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Cursor elements
+    const cursorDot = document.querySelector('.cursor-dot');
+    const cursorOutline = document.querySelector('.cursor-outline');
+    const cursorTrail = document.querySelector('.cursor-trail');
+    
+    // Only proceed if cursor elements exist
+    if (!cursorDot || !cursorOutline || !cursorTrail) return;
+    
+    // Mouse position
+    let mouseX = 0, mouseY = 0;
+    let outlineX = 0, outlineY = 0;
+    let trailX = 0, trailY = 0;
+    const delay = 0.1; // Adjust for smoother/faster follow
+    
+    // Check if user prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    // Initialize cursor position
+    function initCursor() {
+        // Hide default cursor
+        document.body.style.cursor = 'none';
+        
+        // Position cursor elements
+        positionCursorElements();
+        
+        // Add event listeners
+        document.addEventListener('mousemove', handleMouseMove);
+        
+        // Interactive elements
+        const interactiveElements = [
+            'a', 'button', 'input', 'textarea', 'select', 
+            '.interactive', '.clickable', 'label', '[role="button"]'
+        ];
+        
+        interactiveElements.forEach(selector => {
+            document.querySelectorAll(selector).forEach(el => {
+                el.addEventListener('mouseenter', handleElementHover);
+                el.addEventListener('mouseleave', handleElementLeave);
+                el.addEventListener('click', handleElementClick);
+            });
+        });
+        
+        // Disable on touch devices
+        if ('ontouchstart' in window || navigator.maxTouchPoints) {
+            document.body.style.cursor = '';
+            cursorDot.style.display = 'none';
+            cursorOutline.style.display = 'none';
+            cursorTrail.style.display = 'none';
+            return;
+        }
+        
+        // Animation frame
+        if (!prefersReducedMotion) {
+            requestAnimationFrame(animateCursor);
+        } else {
+            // Simplified cursor for reduced motion preference
+            cursorOutline.style.display = 'none';
+            cursorTrail.style.display = 'none';
+        }
+    }
+    
+    // Handle mouse movement
+    function handleMouseMove(e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    }
+    
+    // Position cursor elements
+    function positionCursorElements() {
+        cursorDot.style.left = `${mouseX}px`;
+        cursorDot.style.top = `${mouseY}px`;
+        
+        if (!prefersReducedMotion) {
+            cursorOutline.style.left = `${outlineX}px`;
+            cursorOutline.style.top = `${outlineY}px`;
+            
+            cursorTrail.style.left = `${trailX}px`;
+            cursorTrail.style.top = `${trailY}px`;
+        }
+    }
+    
+    // Animate cursor elements
+    function animateCursor() {
+        // Dot follows immediately
+        cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        
+        if (!prefersReducedMotion) {
+            // Outline follows with slight delay
+            outlineX += (mouseX - outlineX) * delay;
+            outlineY += (mouseY - outlineY) * delay;
+            cursorOutline.style.transform = `translate(${outlineX}px, ${outlineY}px)`;
+            
+            // Trail follows with more delay
+            trailX += (mouseX - trailX) * (delay * 0.5);
+            trailY += (mouseY - trailY) * (delay * 0.5);
+            cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+        }
+        
+        requestAnimationFrame(animateCursor);
+    }
+    
+    // Handle hover state
+    function handleElementHover(e) {
+        const target = e.currentTarget;
+        const isClickable = target.tagName === 'A' || target.tagName === 'BUTTON' || 
+                          target.getAttribute('role') === 'button';
+        
+        cursorDot.classList.add('hover');
+        if (!prefersReducedMotion) {
+            cursorOutline.classList.add('hover');
+            cursorTrail.classList.add('hover');
+        }
+        
+        if (isClickable) {
+            cursorDot.classList.add('clickable');
+            if (!prefersReducedMotion) {
+                cursorOutline.classList.add('clickable');
+            }
+        }
+    }
+    
+    // Handle leave state
+    function handleElementLeave() {
+        cursorDot.classList.remove('hover', 'clickable');
+        if (!prefersReducedMotion) {
+            cursorOutline.classList.remove('hover', 'clickable');
+            cursorTrail.classList.remove('hover');
+        }
+    }
+    
+    // Handle click animation
+    function handleElementClick() {
+        cursorDot.classList.add('click');
+        if (!prefersReducedMotion) {
+            cursorOutline.classList.add('click');
+        }
+        
+        setTimeout(() => {
+            cursorDot.classList.remove('click');
+            if (!prefersReducedMotion) {
+                cursorOutline.classList.remove('click');
+            }
+        }, 300);
+    }
+    
+    // Initialize cursor
+    initCursor();
+});
+
+//all sextions manager
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. SECTION MANAGEMENT =============================================
+    function showSection(sectionId) {
+        // Hide all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.display = 'none';
+            section.classList.remove('active');
+        });
+        
+        // Show requested section
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.style.display = 'block';
+            targetSection.classList.add('active');
+            
+            // Trigger animations for the new section
+            triggerSectionAnimations(sectionId);
+        }
+        
+        // Update navigation active states
+        updateActiveNav(sectionId);
+        
+        // Close mobile menu if open
+        closeMobileMenu();
+        
+        // Scroll to top smoothly
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updateActiveNav(sectionId) {
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${sectionId}`) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    function closeMobileMenu() {
+        const mobileMenu = document.querySelector('.mobile-menu');
+        if (mobileMenu && mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+        }
+    }
+
+    function triggerSectionAnimations(sectionId) {
+        switch(sectionId) {
+            case 'home':
+                initHomeAnimations();
+                break;
+            case 'projects':
+                initProjectAnimations();
+                break;
+            case 'services':
+                initServiceAnimations();
+                break;
+            case 'about':
+                initAboutAnimations();
+                break;
+            case 'contact':
+                initContactAnimations();
+                break;
+        }
+    }
+
+    // 2. NAVIGATION SETUP ==============================================
+    // Main navigation links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetSection = this.getAttribute('href').substring(1);
+            showSection(targetSection);
+        });
+    });
+
+    // Home section buttons
+    document.querySelector('.btn-primary')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        showSection('projects');
+    });
+
+    document.querySelector('.btn-outline')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        showSection('contact');
+    });
+
+    // Mobile menu toggle
+    document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+        document.querySelector('.mobile-menu').classList.toggle('open');
+    });
+
+    // 3. HORIZONTAL SCROLLER ===========================================
+    const initHorizontalScroller = () => {
+        const scroller = document.querySelector('.horizontal-scroller');
+        if (!scroller) return;
+
+        const leftArrow = document.querySelector('.nav-arrow.left');
+        const rightArrow = document.querySelector('.nav-arrow.right');
+        
+        // Arrow navigation
+        leftArrow?.addEventListener('click', () => {
+            scroller.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+        
+        rightArrow?.addEventListener('click', () => {
+            scroller.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+        
+        // Drag to scroll
+        let isDown = false;
+        let startX, scrollLeft;
+        
+        scroller.addEventListener('mousedown', (e) => {
+            isDown = true;
+            scroller.style.cursor = 'grabbing';
+            startX = e.pageX - scroller.offsetLeft;
+            scrollLeft = scroller.scrollLeft;
+        });
+        
+        scroller.addEventListener('mouseleave', () => {
+            isDown = false;
+            scroller.style.cursor = 'grab';
+        });
+        
+        scroller.addEventListener('mouseup', () => {
+            isDown = false;
+            scroller.style.cursor = 'grab';
+        });
+        
+        scroller.addEventListener('mousemove', (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - scroller.offsetLeft;
+            const walk = (x - startX) * 2;
+            scroller.scrollLeft = scrollLeft - walk;
+        });
+        
+        // Touch support
+        scroller.addEventListener('touchstart', (e) => {
+            isDown = true;
+            startX = e.touches[0].pageX - scroller.offsetLeft;
+            scrollLeft = scroller.scrollLeft;
+        }, { passive: true });
+        
+        scroller.addEventListener('touchend', () => {
+            isDown = false;
+        });
+        
+        scroller.addEventListener('touchmove', (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.touches[0].pageX - scroller.offsetLeft;
+            const walk = (x - startX) * 2;
+            scroller.scrollLeft = scrollLeft - walk;
+        }, { passive: false });
+    };
+
+    // 4. ANIMATION INITIALIZERS ========================================
+    function initHomeAnimations() {
+        // Typewriter effect
+        const typewriter = document.querySelector('.typewriter');
+        if (typewriter) {
+            const text = typewriter.textContent;
+            typewriter.textContent = '';
+            let charIndex = 0;
+            
+            function typeText() {
+                if (charIndex < text.length) {
+                    typewriter.textContent += text.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeText, 100);
+                }
+            }
+            setTimeout(typeText, 1000);
+        }
+        
+        // Initialize horizontal scroller
+        initHorizontalScroller();
+        
+        // Lazy loading for images
+        const lazyLoadImages = () => {
+            const lazyImages = document.querySelectorAll('.image-card img[loading="lazy"]');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.getAttribute('src');
+                        img.onload = () => {
+                            img.parentElement.classList.add('loaded');
+                        };
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            lazyImages.forEach(img => observer.observe(img));
+        };
+        lazyLoadImages();
+    }
+
+    function initProjectAnimations() {
+        // Add project card animations
+        const projectCards = document.querySelectorAll('.project-card');
+        projectCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 100 * index);
+        });
+    }
+
+    function initServiceAnimations() {
+        // Add service card animations
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.9)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'scale(1)';
+            }, 150 * index);
+        });
+    }
+
+    function initAboutAnimations() {
+        // Add about section animations
+        const aboutElements = document.querySelectorAll('#about .animate-on-load');
+        aboutElements.forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateX(-20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            
+            setTimeout(() => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateX(0)';
+            }, 100 * index);
+        });
+    }
+
+    function initContactAnimations() {
+        // Add contact form animations
+        const formElements = document.querySelectorAll('#contact .form-group');
+        formElements.forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            
+            setTimeout(() => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            }, 100 * index);
+        });
+    }
+
+    // 5. FORM HANDLING =================================================
+    document.querySelector('.contact-form')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Add your form submission logic here
+        alert('Form submitted successfully!');
+        this.reset();
+    });
+
+    // 6. INITIAL SETUP =================================================
+    // Show home section by default
+    showSection('home');
+    
+    // Initialize any global animations
+    // Add any other initialization code here
+});
+//writeclick disable
+document.addEventListener("contextmenu", function (event) {
+    event.preventDefault(); // Prevent the default right-click menu
+   // Show a custom message or menu
+});
 
 
-    <!--sotiol media-->
-    <!-- From Uiverse.io by wilsondesouza --> 
-    <ul class="example-2">
-        <li class="icon-content">
-          <a
-            href="https://linkedin.com/"
-            aria-label="LinkedIn"
-            data-social="linkedin"
-          >
-            <div class="filled"></div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-linkedin"
-              viewBox="0 0 16 16"
-              xml:space="preserve"
-            >
-              <path
-                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </a>
-          <div class="tooltip">LinkedIn</div>
-        </li>
-        <li class="icon-content">
-          <a href="https://www.github.com/" aria-label="GitHub" data-social="github">
-            <div class="filled"></div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-github"
-              viewBox="0 0 16 16"
-              xml:space="preserve"
-            >
-              <path
-                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </a>
-          <div class="tooltip">GitHub</div>
-        </li>
-        <li class="icon-content">
-          <a
-            href="https://www.instagram.com/"
-            aria-label="Instagram"
-            data-social="instagram"
-          >
-            <div class="filled"></div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-instagram"
-              viewBox="0 0 16 16"
-              xml:space="preserve"
-            >
-              <path
-                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </a>
-          <div class="tooltip">Instagram</div>
-        </li>
-        <li class="icon-content">
-          <a href="https://youtube.com/" aria-label="Youtube" data-social="youtube">
-            <div class="filled"></div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-youtube"
-              viewBox="0 0 16 16"
-              xml:space="preserve"
-            >
-              <path
-                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </a>
-          <div class="tooltip">Youtube</div>
-        </li>
-      </ul>
-
-    <script src="script.js">
-      
-    </script>
-</body>
-</html>
