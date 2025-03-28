@@ -443,14 +443,14 @@ document.addEventListener('DOMContentLoaded', function() {
             skillItem.textContent = skill;
             
             // Random position along the river (Y-axis centered with some variation)
-            const yPos = 50 + (Math.random() * 20 - 10); // 40-60% of container height
+            const yPos = 60 + (Math.random() * 25 - 10); // 40-60% of container height
             
             // Initial position (off-screen to the left)
             skillItem.style.left = '-100px';
             skillItem.style.top = `${yPos}%`;
             
             // Random speed (3-8 seconds to cross the screen)
-            const duration = 10 + Math.random() * 15;
+            const duration = 10 + Math.random() * 35;
             skillItem.style.transition = `left ${duration}s linear`;
             
             skillsContainer.appendChild(skillItem);
