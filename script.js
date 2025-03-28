@@ -450,7 +450,7 @@ document.addEventListener('DOMContentLoaded', function() {
             skillItem.style.top = `${yPos}%`;
             
             // Random speed (3-8 seconds to cross the screen)
-            const duration = 3 + Math.random() * 5;
+            const duration = 10 + Math.random() * 12;
             skillItem.style.transition = `left ${duration}s linear`;
             
             skillsContainer.appendChild(skillItem);
