@@ -190,7 +190,7 @@ function startSkillsAnimation() {
         setTimeout(() => {
             const skill = skills[Math.floor(Math.random() * skills.length)];
             createFloatingSkill(skill);
-        }, i * 500);
+        }, i * 5000);
     }
     
     // Create drops at random intervals
@@ -198,7 +198,7 @@ function startSkillsAnimation() {
         if (Math.random() < 0.3) { // 30% chance each second
             createSkillDrop();
         }
-    }, 1000);
+    }, 10000);
     
     // Store interval for cleanup if needed
     return dropInterval;
